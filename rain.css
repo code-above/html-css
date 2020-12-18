@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    background: linear-gradient(#66ccff, #ccffff);
+}
+
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    font-family: "Roboto";
+    background-color:rgb(226, 243, 247);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border-radius: 25px;
+    background-color:red;
+    color: black;
+    height: 500px;
+}
+
+
+.weather-side {
+    position: relative;
+    height: 100%;
+    border-radius: 25px;
+    background-image: url("CN\ tower\ night.png.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    transition: transform 300ms ease;
+    transform: translateZ(0) scale(1.02) perspective(1000px);
+    float: left;
+}
+
+.weather-side:hover {
+    transform: scale(1.1) perspective(1500px) rotateY(10deg)
+}
+
+.weather-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#66ccff, #ccffff);
+    border-radius: 25px;
+    opacity: 0.7;
+    
+}
+
+.date-container {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+}
+
+.day-name {
+    margin: 0;
+    color: #000033;
+
+}
+
+.full-date {
+    display:block;
+    color: #000033;
+
+}
+
+.location {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000033;
+
+}
+
+.location-icon {
+    display: inline-block;
+    height: 0.8em;
+    width: auto;
+    margin-right: 5px;
+
+}
+
+.weather-container {
+    position: absolute;
+    bottom: 25px;
+    left:25px;
+
+}
+
+.weather-icon.feather {
+    height: 60px;
+    width: auto;
+    color:grey;
+    transition: all 1.5s linear;
+    transform: scale(1.02) 
+}
+
+.weather-icon.feather:hover {
+    transform: scale(1.6) translateY(-120px); 
+   
+}
+
+.weather-temp {
+    margin: 0;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #000033;
+
+}
+
+.weather-desc {
+    margin: 0;
+    color: #000033;
+}
+
+
+.rain {
+    height: 100vh;
+    background: url(rain.png);
+    animation: rain .2s linear infinite;
+}
+
+
+@keyframes rain {
+    0% {
+        background-position: 0%  0%;
+    }
+    100% {
+        background-position: 120% 80%;
+    }
+}
